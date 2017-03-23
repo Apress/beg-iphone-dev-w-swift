@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuartzFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="redraw" id="8bC-Xf-vdC" customClass="QuartzFunView" customModule="QuartzFun" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="slp-Jz-reN">
+                                <rect key="frame" x="95" y="20" width="290" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="ICG-mB-Ocy"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Red"/>
+                                    <segment title="Blue"/>
+                                    <segment title="Yellow"/>
+                                    <segment title="Green"/>
+                                    <segment title="Random"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="dwy-Oi-i23"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MXq-XD-Ocb">
+                                <rect key="frame" x="131" y="443" width="219" height="29"/>
+                                <segments>
+                                    <segment title="Line"/>
+                                    <segment title="Rect"/>
+                                    <segment title="Ellipse"/>
+                                    <segment title="Image"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeShape:" destination="BYZ-38-t0r" eventType="valueChanged" id="aZY-y7-NTm"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="MXq-XD-Ocb" secondAttribute="centerX" id="EWw-pQ-YRI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MXq-XD-Ocb" secondAttribute="bottom" constant="9" id="XvW-qf-NlK"/>
+                            <constraint firstAttribute="centerX" secondItem="slp-Jz-reN" secondAttribute="centerX" id="cM5-aA-HEK"/>
+                            <constraint firstItem="slp-Jz-reN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lti-Lc-00b"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorControl" destination="slp-Jz-reN" id="fUa-LB-eJ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

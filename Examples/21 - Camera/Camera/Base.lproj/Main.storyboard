@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Main View">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPp-Sj-bct">
+                                <rect key="frame" x="0.0" y="550" width="600" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pUc-p2-trO"/>
+                                </constraints>
+                                <state key="normal" title="Pick from Library">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectExistingPictureOrVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sed-tA-aSh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUF-Oe-tIi">
+                                <rect key="frame" x="0.0" y="512" width="600" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KdR-u5-6qw"/>
+                                </constraints>
+                                <state key="normal" title="New Photo or Video">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shootPictureOrVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GmZ-cg-Y8y"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B0r-xc-iOA">
+                                <rect key="frame" x="0.0" y="20" width="600" height="484"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="B0r-xc-iOA" secondAttribute="trailing" id="Njh-Ax-TNc"/>
+                            <constraint firstItem="NPp-Sj-bct" firstAttribute="top" secondItem="rUF-Oe-tIi" secondAttribute="bottom" constant="8" id="RDE-E8-Sd6"/>
+                            <constraint firstItem="B0r-xc-iOA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bt1-2D-PxO"/>
+                            <constraint firstItem="NPp-Sj-bct" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cVX-7q-ct4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NPp-Sj-bct" secondAttribute="bottom" constant="20" id="gfs-G0-sum"/>
+                            <constraint firstItem="B0r-xc-iOA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="he4-Sd-WPY"/>
+                            <constraint firstItem="rUF-Oe-tIi" firstAttribute="top" secondItem="B0r-xc-iOA" secondAttribute="bottom" constant="8" id="jg8-ks-ahA"/>
+                            <constraint firstAttribute="trailing" secondItem="NPp-Sj-bct" secondAttribute="trailing" id="sf0-Ya-Qio"/>
+                            <constraint firstAttribute="trailing" secondItem="rUF-Oe-tIi" secondAttribute="trailing" id="tD9-YE-4Jl"/>
+                            <constraint firstItem="rUF-Oe-tIi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tv3-Np-pAx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="B0r-xc-iOA" id="6Eq-WI-fSE"/>
+                        <outlet property="takePictureButton" destination="rUF-Oe-tIi" id="zmh-Eq-JyN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

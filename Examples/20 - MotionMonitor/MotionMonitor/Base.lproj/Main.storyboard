@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MotionMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Main View">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="480" translatesAutoresizingMaskIntoConstraints="NO" id="1V2-Ti-nYM">
+                                <rect key="frame" x="0.0" y="20" width="600" height="188"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="480" translatesAutoresizingMaskIntoConstraints="NO" id="vSo-n3-hPf">
+                                <rect key="frame" x="0.0" y="216" width="600" height="188"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="480" translatesAutoresizingMaskIntoConstraints="NO" id="hTF-bJ-Uj5">
+                                <rect key="frame" x="0.0" y="412" width="600" height="188"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hTF-bJ-Uj5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3aE-HZ-1s0"/>
+                            <constraint firstAttribute="trailing" secondItem="vSo-n3-hPf" secondAttribute="trailing" id="Thz-qV-C5G"/>
+                            <constraint firstItem="hTF-bJ-Uj5" firstAttribute="top" secondItem="vSo-n3-hPf" secondAttribute="bottom" constant="8" id="d2Q-U7-t2O"/>
+                            <constraint firstItem="hTF-bJ-Uj5" firstAttribute="height" secondItem="vSo-n3-hPf" secondAttribute="height" id="egk-Kx-pXU"/>
+                            <constraint firstItem="hTF-bJ-Uj5" firstAttribute="height" secondItem="1V2-Ti-nYM" secondAttribute="height" id="f9G-7k-ZG9"/>
+                            <constraint firstAttribute="trailing" secondItem="1V2-Ti-nYM" secondAttribute="trailing" id="fZv-IK-Dsu"/>
+                            <constraint firstItem="1V2-Ti-nYM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mNJ-h1-Bgo"/>
+                            <constraint firstAttribute="trailing" secondItem="hTF-bJ-Uj5" secondAttribute="trailing" id="nAt-Ub-yzX"/>
+                            <constraint firstItem="vSo-n3-hPf" firstAttribute="top" secondItem="1V2-Ti-nYM" secondAttribute="bottom" constant="8" id="nGw-Tb-02v"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hTF-bJ-Uj5" secondAttribute="bottom" id="pPm-DI-Dfz"/>
+                            <constraint firstItem="vSo-n3-hPf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wIb-iU-5B8"/>
+                            <constraint firstItem="1V2-Ti-nYM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wLB-Xc-oa0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accelerometerLabel" destination="vSo-n3-hPf" id="W4Z-2e-yR6"/>
+                        <outlet property="attitudeLabel" destination="hTF-bJ-Uj5" id="hc3-UT-J4c"/>
+                        <outlet property="gyroscopeLabel" destination="1V2-Ti-nYM" id="B4l-43-qeX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="235" y="420"/>
+        </scene>
+    </scenes>
+</document>
